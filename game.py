@@ -68,6 +68,7 @@ while running:
                 plane.apply_upgrade(chosen)
                 # Restore some health between rounds
                 plane.health.hp = min(plane.health.hp + 150, plane.health.max_hp)
+                plane.speed = max(4, plane.speed)
                 round_manager.start_round()
                 player_bullets.clear()
                 enemy_bullets.clear()
